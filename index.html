@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container flex">
+
+
+        <div class="leftbox border bg-black">
+            <div class="close invert">
+                <img src="icons/close.svg" alt="close" srcset="">
+            </div>
+            
+            <div class="home bg-grey rounded">  
+               
+                <div class="logo">
+                    <img src="icons/logo.svg" class="invert" alt="logo">
+                </div>
+
+                <ul>
+                    <li><img src="icons/home.svg" class="invert" alt="home">HOME</li>
+                    <li><img src="icons/search.svg" class="invert" alt="search">SEARCH</li>
+
+
+                </ul>
+            </div>
+            <div class="lib   rounded p1 bg-grey">
+                <div class="heading">
+                 
+                    <img src="icons/lib.svg" class="invert svg" alt="lib">
+                    <h3>Your Library</h3>
+                </div>
+
+                <div class="songlist">
+
+                    <ul>
+
+                    </ul>
+                </div>
+
+
+
+                <div class="footer">
+
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/">
+                            <span>Legal</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                            <span>Safety &amp; Privacy Center</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                            <span>Privacy Policy</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                            <span>Cookies</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                            <span>About Ads</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/accessibility/">
+                            <span>Accessibility</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                            <span>Cookies</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="rigthbox rounded ">
+            <div class="header rounded">
+                <div class="nav">
+                        
+                            
+                        <img class="humburger" src="icons/hambuger.svg" alt="ham"/>
+                
+                                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                </div>
+                <div class="buttons">
+                    <button class="signbtn">Sign-up</button>
+                    <button class="loginbtn">Login</button>
+                </div>
+            </div>
+            <div class="spotify-play">
+                <h1>Spotify Playlist</h1>
+                <div class="cardcontainer">
+                    <div data-folder="album1" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"
+                                fill="none">
+                                <!-- Background Circle -->
+                                <circle cx="25" cy="25" r="25" fill="green" />
+                                <!-- Play Icon with Padding and Edgy Triangle -->
+                                <polygon points="20,15 35,25 20,35" fill="black" />
+                            </svg>
+
+
+
+
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="">
+                        <h2>lofi beats</h2>
+                        <p>chill beats,lofi vibes,new tracks</p>
+                    </div>
+                    <div data-folder="album2" class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"
+                                fill="none">
+                                <!-- Background Circle -->
+                                <circle cx="25" cy="25" r="25" fill="green" />
+                                <!-- Play Icon with Padding and Edgy Triangle -->
+                                <polygon points="20,15 35,25 20,35" fill="black" />
+                            </svg>
+
+
+
+
+                        </div>
+                        <img src="cover/ablum2cover.jpeg" alt="">
+                        <h2>love beats</h2>
+                        <p> telugu lofi songs...</p>
+                    </div>
+
+
+                </div>
+                
+                <div class="playbar">
+                    <div class="seekbar">
+                               <div class="circle"></div>
+                    </div>
+                    <div class="belowbar">
+                    <div class="songinfo"></div>
+                    <div class="playsong invert">
+
+
+                        <img src="icons/previous.svg" alt="previous" id="previous">
+                        <img src="icons/play.svg" alt="play" id="play">
+                        <img src="icons/next.svg" alt="next" id="next">
+                    </div>
+                    <div class="timevolume">
+                        <div class="invert volume">
+                            <img src="icons/volume.svg" alt="volume" id="volume"/>
+                        </div>
+                       
+
+                    <div class="songtime"></div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
