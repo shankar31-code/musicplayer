@@ -24,7 +24,7 @@ async function getsongs(folder)
             const element=aa[i];
       //checking element where href end with a ".mp3"
             if(element.href.endsWith(".mp3")){
-                  songs.push(element.href.split(`${folder}/`)[1]);
+                  songs.push(element.href.split(`${folder}`)[1]);
             }
 
         }
