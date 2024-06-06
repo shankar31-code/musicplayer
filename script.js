@@ -46,9 +46,9 @@ for (const song of songs) {
     
 }
  const playmusic=(track,pause=false)=>{
-  currentAudio.src=`/${currentfolder}//%5BiSongs.info%5D`+track
+  currentAudio.src=`/${currentfolder}/%5BiSongs.info%5D`+track
   // for playing specfied song in library
-  //let audio=new Audio("/songs/%5BiSongs.info%5D"+track);
+  //let audio=new Audio("/songs//%5BiSongs.info%5D"+track);
   if(!pause){
 
       currentAudio.play();
