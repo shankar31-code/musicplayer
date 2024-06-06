@@ -24,7 +24,7 @@ async function getsongs(folder)
             const element=aa[i];
       //checking element where href end with a ".mp3"
             if(element.href.endsWith(".mp3")){
-                  songs.push(element.href.split(`${folder}`)[1]);
+                  songs.push(decodeURIComponent(element.href.split(`${folder}/`)[1]));
             }
 
         }
@@ -46,7 +46,7 @@ for (const song of songs) {
     
 }
  const playmusic=(track,pause=false)=>{
-  currentAudio.src=`/${currentfolder}/`+track
+  currentAudio.src=`/${currentfolder}/`+encodeURIComponent(track);
   // for playing specfied song in library
   //let audio=new Audio("/songs//%5BiSongs.info%5D"+track);
   if(!pause){
@@ -58,7 +58,7 @@ for (const song of songs) {
     }
   
 
-  document.querySelector(".songinfo").innerHTML=decodeURI(track)
+  document.querySelector(".songinfo").innerHTML=encodeURIComponent(track);
   document.querySelector(".songtime").innerHTML="00:00/00:00";
  
     
@@ -126,7 +126,7 @@ playmusic(songs[0],true);
   //adding event listener for previous and next
   previous.addEventListener("click",()=>{
     console.log("previous clicked")
-    let index=songs.indexOf( currentAudio.src.split("%5BiSongs.info%5D").slice(-1)[0])
+    let index=songs.indexOf( decodeURIComponent(currentAudio.src.split("/").pop()));
    
     console.log(songs,index)
     if((index-1)>=0){
@@ -134,7 +134,7 @@ playmusic(songs[0],true);
     }
   })
   next.addEventListener("click",()=>{
-    let index=songs.indexOf( currentAudio.src.split("%5BiSongs.info%5D").slice(-1)[0])
+    let index=songs.indexOf( decodeURIComponent(currentAudio.src.split("/").pop()));
    
     console.log(songs,index)
     if((index+1)<songs.length){
