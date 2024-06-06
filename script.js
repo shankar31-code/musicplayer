@@ -24,7 +24,7 @@ async function getsongs(folder)
             const element=aa[i];
       //checking element where href end with a ".mp3"
             if(element.href.endsWith(".mp3")){
-                  songs.push(element.href.split(`${folder}/%5BiSongs.info%5D`)[1]);
+                  songs.push(element.href.split(`${folder}/`)[1]);
             }
 
         }
@@ -46,7 +46,7 @@ for (const song of songs) {
     
 }
  const playmusic=(track,pause=false)=>{
-  currentAudio.src=`/${currentfolder}/%5BiSongs.info%5D`+track
+  currentAudio.src=`/${currentfolder}/`+track
   // for playing specfied song in library
   //let audio=new Audio("/songs//%5BiSongs.info%5D"+track);
   if(!pause){
