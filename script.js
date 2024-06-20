@@ -12,7 +12,7 @@ function formatTime(seconds) {
 async function getsongs(folder)
 {    
   currentfolder = folder;
-  let a=await fetch(`${folder}`)
+  let a=await fetch(`songs/${folder}`)
     let response=await a.text();
     console.log(response)
     let div=document.createElement("div")
@@ -46,7 +46,7 @@ for (const song of songs) {
     
 }
  const playmusic=(track,pause=false)=>{
-  currentAudio.src=`/${currentfolder}/`+encodeURIComponent(track);
+  currentAudio.src=`songs/${currentfolder}/`+encodeURIComponent(track);
   // for playing specfied song in library
   //let audio=new Audio("/songs//%5BiSongs.info%5D"+track);
   if(!pause){
@@ -69,7 +69,7 @@ for (const song of songs) {
   async function main(){
 
    
- await getsongs("songs/album2");
+ await getsongs("album2");
 playmusic(songs[0],true);
 
 
